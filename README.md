@@ -1,4 +1,4 @@
-# Better-File-Explorer-for-Chrome
+# Better File Explorer for Chrome
 Improves chrome's file explorer when browsing local files.  
 The exetension also works with Edge (and other Chromium-based browsers)
 
