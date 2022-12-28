@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    
+    "name": "Better File Explorer for Chrome", 
+    
+    "version": "1.0.0",
+    
+    "description": "Better File Explorer for Chrome",
+    
+    "icons": {
+      "16": "images/file-explorer-icon.png",
+      "32": "images/file-explorer-icon.png",
+      "48": "images/file-explorer-icon.png",
+      "128": "images/file-explorer-icon.png"
+    },
+    
+    "content_scripts": [{
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "matches": ["file://*"]
+    }],
+    
+    "author": "federicobrancasi@gmail.com", 
+    
+    "permissions": [ "<all_urls>" ]
+}

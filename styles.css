@@ -1,0 +1,128 @@
+* {
+  font-size: 1.05em !important;
+  color: #ffffff !important;
+  font-family: "Montserrat";
+  font-weight: 550;
+}
+
+body {
+  background-color: #ffffff;
+  margin-left: 7% !important;
+  margin-right: 7% !important;
+  margin-bottom: 5% !important;
+}
+
+h1 {
+  font-size: 1.66em !important;
+  color: #1c1c1c !important;
+  font-weight: 800;
+  background-color: #ffffff;
+  border: 2px solid #101010 !important;
+  padding-bottom: 3px !important;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+a:link {
+  color: #1c1c1c !important;
+}
+
+a:visited {
+  color: #1c1c1c !important;
+}
+
+table tr:first-child th {
+  background: #f4f6fb !important;
+  font-weight: 900;
+  padding: 4px 6px;
+  color: #1c1c1c !important;
+  border-top: 1px solid #black;
+  border-bottom: 1px solid #black;
+  text-align: center !important;
+}
+
+#nameColumnHeader {
+  background: #f4f6fb !important;
+  font-weight: 900;
+  padding: 4px 6px;
+  color: #1c1c1c !important;
+  border-top: 1px solid #black;
+  border-bottom: 1px solid #black;
+  text-align: left !important;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #ffffff;
+  table-layout: auto !important;
+  width: 100% !important;
+}
+
+td {
+  width: 70% !important;
+  max-width: 70% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  overflow-wrap: break-word !important;
+  padding: 7px;
+}
+
+th {
+  cursor: pointer;
+  background-color: #a9a9a9;
+}
+
+table.icon-dir {
+  width: 70% !important;
+  max-width: 70% !important;
+  overflow-wrap: break-word !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+}
+
+td.detailsColumn {
+  color: #1c1c1c !important;
+  -webkit-padding-start: 0.5em !important;
+  text-align: center !important;
+  word-wrap: break-word !important;
+  width: 30% !important;
+}
+
+a.icon {
+  -webkit-padding-start: 1.7em !important;
+  text-decoration: none;
+}
+
+a.icon:hover {
+  color: #aaaaaa !important;
+  transition: 0.2s !important;
+  text-decoration: none !important;
+}
+
+tr:nth-child(even) {
+  background-color: #f4f6fb;
+}
+
+a.file {
+  background: url("https://i.imgur.com/FYrv7mJ.png") left top no-repeat !important;
+  background-size: 26px 26px !important;
+}
+
+a.dir {
+  background: url("https://i.imgur.com/bHGgzMq.png") left top no-repeat !important;
+  background-size: 26px 26px !important;
+}
+
+a.up {
+  background: left top no-repeat !important;
+  background-image: url("https://i.imgur.com/p2y4Vnc.png") !important;
+  background-size: 26px 26px !important;
+}
+
+#parentDirText {
+  font-size: 0.8em !important;
+  font-weight: bold;
+  color: #101010 !important;
+}
