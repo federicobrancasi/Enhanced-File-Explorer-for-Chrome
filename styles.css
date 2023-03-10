@@ -23,6 +23,7 @@ h1 {
   padding-left: 5px;
   padding-right: 5px;
   white-space: nowrap;
+  display: block !important;
 }
 
 a:link {

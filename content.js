@@ -1,18 +1,26 @@
-// initialize the header with the current directory name
-var header = document.getElementById("header");
+"use strict";
 
-// get the text of the header
-header.textContent = header.textContent.slice(9, -1);
+// Get header element and trim the text content
+const header = document.getElementById("header");
+header.textContent = header.textContent.trim();
 
-// if the title is empty, set it to ~
-if (header.textContent == "") {
+// Set the header text content to ~ if it is empty
+if (header.textContent === "") {
   header.textContent = "~";
 }
 
-// if there is something that has more then 40 characters, cut it off
-var a = document.querySelectorAll("a");
-for (strings in a) {
-  if (a[strings].textContent.length > 40) {
-    a[strings].textContent = a[strings].textContent.slice(0, 40) + "...";
-  }
+// Set the width of the header to 100% in order to fill the space
+header.style.width = "100%";
+
+// Set the length of the header to 65 characters
+if (header.textContent.length > 65) {
+  header.textContent = header.textContent.slice(0, 65) + "...";
 }
+
+// Shorten the text content of links that are too long
+const links = document.querySelectorAll("a");
+links.forEach((link) => {
+  if (link.textContent.length > 60) {
+    link.textContent = link.textContent.slice(0, 60) + "...";
+  }
+});
