@@ -12,6 +12,6 @@ To add this extension to your browser, simply click [here](https://chrome.google
 - Compatible with Edge and other Chromium-based browsers
 
 ## Achievements Unlocked! 🏆
-📈 **User Base:** With over 400 daily users and surpassing 1500 installations, Better File Explorer is gaining popularity and making file browsing a breeze.
+📈 **User Base:** With over 500 daily users and surpassing 1500 installations, Better File Explorer is gaining popularity and making file browsing a breeze.
 
 Feel free to provide feedback and suggestions to improve and grow the extension. Happy browsing! 🚀📂
