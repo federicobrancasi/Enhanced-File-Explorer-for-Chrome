@@ -5,7 +5,7 @@ Upgrade your Chrome file browsing experience with the Better File Explorer exten
 ⚠️ **Attention:** Ensure that you enable "ALLOW ACCESS TO FILE URLS" in the extension settings for optimal performance.
 
 ## How to Install 🌐
-To add this extension to your browser, simply click [here](https://chrome.google.com/webstore/detail/better-file-explorer-for/enoogpocakiocfjdghdahjnmpgejpghd/related) to visit the Chrome Web Store.
+To add this extension to your browser, simply click [here](https://chromewebstore.google.com/detail/better-file-explorer-for/enoogpocakiocfjdghdahjnmpgejpghd) to visit the Chrome Web Store.
 
 ## Key Features 🎉
 - Improved file explorer for local files in Chrome
