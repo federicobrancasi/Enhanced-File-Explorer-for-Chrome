@@ -1,11 +1,11 @@
 {
     "manifest_version": 3,
     
-    "name": "Better File Explorer for Chrome", 
+    "name": "Enhanced File Explorer for Chrome", 
     
     "version": "2.0.0",
     
-    "description": "Better File Explorer for Chrome",
+    "description": "Enhanced File Explorer for Chrome",
     
     "icons": {
       "16": "images/file-explorer-icon.png",
