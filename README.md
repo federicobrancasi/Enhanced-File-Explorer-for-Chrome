@@ -12,6 +12,6 @@ To add this extension to your browser, simply click [here](https://chromewebstor
 - Compatible with Edge and other Chromium-based browsers
 
 ## Achievements Unlocked! 🏆
-📈 **User Base:** With over 600 daily users and surpassing 3000 installations, Enhanced File Explorer is gaining popularity and making file browsing a breeze.
+📈 **User Base:** With over 900 daily users and surpassing 4000 installations, Enhanced File Explorer is gaining popularity and making file browsing a breeze.
 
 Feel free to provide feedback and suggestions to improve and grow the extension. Happy browsing! 🚀📂
