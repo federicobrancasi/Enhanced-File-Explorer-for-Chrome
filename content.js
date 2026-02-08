@@ -6,6 +6,16 @@ const CONFIG = {
   FALLBACK_HEADER: "~"
 };
 
+function loadGoogleFonts() {
+  if (document.getElementById("fe-google-fonts")) return;
+
+  const link = document.createElement("link");
+  link.id = "fe-google-fonts";
+  link.rel = "stylesheet";
+  link.href = "https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lato:wght@400;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap";
+  document.head.appendChild(link);
+}
+
 function truncateText(text, maxLength) {
   if (!text || text.length <= maxLength) {
     return text;
@@ -278,6 +288,8 @@ async function init() {
   if (isAlreadyEnhanced()) {
     return;
   }
+
+  loadGoogleFonts();
 
   const settings = await loadSettings();
 

@@ -1,0 +1,30 @@
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node (if ever added)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+*.zip
+*.crx
+*.pem
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

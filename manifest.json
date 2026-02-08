@@ -2,20 +2,20 @@
   "manifest_version": 3,
   "name": "Enhanced File Explorer for Chrome",
   "version": "4.2.0",
-  "description": "A beautiful file explorer for Chrome with 11 themes, custom colors, and font options",
+  "description": "A beautiful file explorer for Chrome with 14 themes, custom colors, and font options",
 
   "icons": {
-    "16": "images/file-explorer-icon.png",
-    "32": "images/file-explorer-icon.png",
-    "48": "images/file-explorer-icon.png",
-    "128": "images/file-explorer-icon-128x128.png"
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon-128.png"
   },
 
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
-      "16": "images/file-explorer-icon.png",
-      "32": "images/file-explorer-icon.png"
+      "16": "images/icon.png",
+      "32": "images/icon.png"
     },
     "default_title": "Enhanced File Explorer"
   },
