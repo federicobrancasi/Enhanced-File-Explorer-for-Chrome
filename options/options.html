@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced File Explorer - Settings</title>
+  <link rel="stylesheet" href="options.css">
+  <script src="../themes.js"></script>
+</head>
+<body>
+  <div class="options-container">
+    <header class="options-header">
+      <h1>Enhanced File Explorer</h1>
+      <p class="subtitle">Settings</p>
+    </header>
+
+    <main class="options-content">
+      <!-- Theme Gallery -->
+      <section class="setting-group">
+        <h2>Themes</h2>
+        <div class="theme-gallery" id="theme-gallery">
+          <!-- Theme tiles will be inserted by JS -->
+        </div>
+      </section>
+
+      <!-- Preview (moved here, under themes) -->
+      <section class="setting-group">
+        <h2>Preview</h2>
+        <div class="preview-container" id="preview-container">
+          <div class="preview-header" id="preview-header">/Users/example/Documents</div>
+          <div class="preview-table">
+            <div class="preview-row preview-th">
+              <span>Name</span>
+              <span>Size</span>
+              <span>Date Modified</span>
+            </div>
+            <div class="preview-row" id="preview-row-1">
+              <span class="preview-link" id="preview-link"><span class="preview-icon preview-folder"></span>Projects</span>
+              <span>--</span>
+              <span>Feb 8, 2026</span>
+            </div>
+            <div class="preview-row preview-alt" id="preview-row-2">
+              <span class="preview-link"><span class="preview-icon preview-file"></span>readme.txt</span>
+              <span>2.4 KB</span>
+              <span>Feb 7, 2026</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Custom Theme -->
+      <section class="setting-group" id="custom-theme-section">
+        <h2>Create Custom Theme</h2>
+        <p class="section-description">Design your own color scheme and save it</p>
+
+        <div class="setting-item" style="margin-bottom: 16px;">
+          <div class="setting-info">
+            <label for="custom-theme-name">Theme Name</label>
+          </div>
+          <input type="text" id="custom-theme-name" placeholder="My Theme" style="padding: 8px 12px; font-size: 14px; border: 1px solid #ddd; border-radius: 8px; min-width: 160px;">
+        </div>
+
+        <div class="color-grid">
+          <div class="color-item">
+            <label for="custom-bg">Background</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="custom-bg" value="#ffffff">
+              <input type="text" id="custom-bg-text" value="#ffffff" class="color-text">
+            </div>
+          </div>
+
+          <div class="color-item">
+            <label for="custom-bgAlt">Alt Background</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="custom-bgAlt" value="#f4f6fb">
+              <input type="text" id="custom-bgAlt-text" value="#f4f6fb" class="color-text">
+            </div>
+          </div>
+
+          <div class="color-item">
+            <label for="custom-text">Text</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="custom-text" value="#1c1c1c">
+              <input type="text" id="custom-text-text" value="#1c1c1c" class="color-text">
+            </div>
+          </div>
+
+          <div class="color-item">
+            <label for="custom-link">Links</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="custom-link" value="#2b6cb0">
+              <input type="text" id="custom-link-text" value="#2b6cb0" class="color-text">
+            </div>
+          </div>
+
+          <div class="color-item">
+            <label for="custom-border">Borders</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="custom-border" value="#000000">
+              <input type="text" id="custom-border-text" value="#000000" class="color-text">
+            </div>
+          </div>
+
+          <div class="color-item">
+            <label for="custom-iconColor">Icons</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="custom-iconColor" value="#2b6cb0">
+              <input type="text" id="custom-iconColor-text" value="#2b6cb0" class="color-text">
+            </div>
+          </div>
+        </div>
+
+        <button id="apply-custom-theme" class="btn-primary">Save & Apply Theme</button>
+      </section>
+
+      <!-- Typography & Display -->
+      <section class="setting-group">
+        <h2>Typography & Display</h2>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label for="font-family">Font Family</label>
+            <p class="setting-description">Choose the font for file listings</p>
+          </div>
+          <select id="font-family">
+            <optgroup label="Sans-Serif">
+              <option value="system">System Default</option>
+              <option value="montserrat">Montserrat</option>
+              <option value="inter">Inter</option>
+              <option value="roboto">Roboto</option>
+              <option value="opensans">Open Sans</option>
+              <option value="lato">Lato</option>
+              <option value="poppins">Poppins</option>
+              <option value="sourcesans">Source Sans 3</option>
+            </optgroup>
+            <optgroup label="Monospace">
+              <option value="firacode">Fira Code</option>
+              <option value="jetbrains">JetBrains Mono</option>
+              <option value="sourcecodepro">Source Code Pro</option>
+              <option value="ibmplex">IBM Plex Mono</option>
+            </optgroup>
+            <optgroup label="Serif">
+              <option value="merriweather">Merriweather</option>
+              <option value="lora">Lora</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label for="icon-style">Icon Style</label>
+            <p class="setting-description">Choose file/folder icon style</p>
+          </div>
+          <select id="icon-style">
+            <option value="icons">SVG Icons</option>
+            <option value="emojis">Emojis 📁📄</option>
+          </select>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <label for="font-size">Font Size</label>
+            <p class="setting-description">Adjust text size (<span id="font-size-value">1.05</span>em)</p>
+          </div>
+          <div class="slider-wrapper">
+            <input type="range" id="font-size" min="0.8" max="1.5" step="0.05" value="1.05">
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="setting-group">
+        <h2>About</h2>
+        <div class="about-info">
+          <p><strong>Version:</strong> 4.1.0</p>
+          <p><strong>Author:</strong> Federico Brancasi</p>
+          <p class="about-note">
+            This extension enhances Chrome's native file directory listing with a beautiful interface,
+            11 preset themes, custom colors, and font options.
+            It auto-activates on file:// pages (excluding .md files for Markdown Viewer compatibility).
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div class="save-toast" id="save-toast">
+      <span class="toast-icon">✓</span>
+      <span>Settings saved</span>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

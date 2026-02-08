@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>File Explorer</h1>
+    </header>
+
+    <div class="status-section" id="status-section">
+      <span class="status-icon" id="status-icon">✨</span>
+      <span class="status-text" id="status-text">Checking...</span>
+    </div>
+
+    <div class="toggle-section" id="toggle-section">
+      <label class="toggle-label">
+        <span id="toggle-text">Disable on this page</span>
+        <label class="switch">
+          <input type="checkbox" id="disable-toggle">
+          <span class="slider"></span>
+        </label>
+      </label>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="theme-section">
+      <label for="theme-select">Theme</label>
+      <select id="theme-select">
+        <option value="light">Light</option>
+        <option value="ocean">Ocean</option>
+        <option value="dark">Dark</option>
+        <option value="midnight">Midnight</option>
+        <option value="forest">Forest</option>
+        <option value="sunset">Sunset</option>
+        <option value="lavender">Lavender</option>
+        <option value="rose">Rose</option>
+        <option value="sepia">Sepia</option>
+        <option value="nord">Nord</option>
+        <option value="contrast">High Contrast</option>
+        <option value="custom">Custom...</option>
+      </select>
+    </div>
+
+    <div class="theme-preview" id="theme-preview">
+      <div class="preview-bg" id="preview-bg">
+        <div class="preview-header" id="preview-header"></div>
+        <div class="preview-row" id="preview-row"></div>
+        <div class="preview-link" id="preview-link">Link</div>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <a href="#" id="settings-link">All Settings</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

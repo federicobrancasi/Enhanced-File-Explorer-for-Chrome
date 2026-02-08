@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 260px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #1c1c1c;
+  background: #ffffff;
+}
+
+.popup-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+.status-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.status-icon {
+  font-size: 18px;
+}
+
+.status-text {
+  font-size: 13px;
+  color: #666;
+}
+
+.toggle-section {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.toggle-label > span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4CAF50;
+  transition: 0.2s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.2s;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+  background-color: #f44336;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 4px 0;
+}
+
+.theme-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-section label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.theme-section select {
+  padding: 6px 10px;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  max-width: 130px;
+}
+
+.theme-section select:hover {
+  border-color: #bbb;
+}
+
+.theme-section select:focus {
+  border-color: #2b6cb0;
+}
+
+.theme-preview {
+  padding: 8px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.preview-bg {
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.preview-header {
+  height: 6px;
+  border-radius: 2px;
+  width: 60%;
+}
+
+.preview-row {
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.preview-link {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.popup-footer {
+  padding-top: 4px;
+  text-align: center;
+}
+
+.popup-footer a {
+  font-size: 12px;
+  color: #888;
+  text-decoration: none;
+}
+
+.popup-footer a:hover {
+  color: #2b6cb0;
+  text-decoration: underline;
+}

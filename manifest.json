@@ -1,26 +1,55 @@
 {
-    "manifest_version": 3,
-    
-    "name": "Enhanced File Explorer for Chrome", 
-    
-    "version": "3.0.0",
-    
-    "description": "Enhanced File Explorer for Chrome",
-    
-    "icons": {
+  "manifest_version": 3,
+  "name": "Enhanced File Explorer for Chrome",
+  "version": "4.2.0",
+  "description": "A beautiful file explorer for Chrome with 11 themes, custom colors, and font options",
+
+  "icons": {
+    "16": "images/file-explorer-icon.png",
+    "32": "images/file-explorer-icon.png",
+    "48": "images/file-explorer-icon.png",
+    "128": "images/file-explorer-icon-128x128.png"
+  },
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
       "16": "images/file-explorer-icon.png",
-      "32": "images/file-explorer-icon.png",
-      "48": "images/file-explorer-icon.png",
-      "128": "images/file-explorer-icon.png"
+      "32": "images/file-explorer-icon.png"
     },
-    
-    "content_scripts": [{
-      "css": ["styles.css"],
-      "js": ["content.js"],
-      "matches": ["file://*"]
-    }],
-    
-    "author": "federicobrancasi@gmail.com", 
-    
-    "permissions": [ "<all_urls>" ]
+    "default_title": "Enhanced File Explorer"
+  },
+
+  "options_page": "options/options.html",
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["themes.js", "content.js"],
+    "matches": ["file://*/*"],
+    "exclude_matches": [
+      "file://*/*.md",
+      "file://*/*.MD",
+      "file://*/*.markdown",
+      "file://*/*.MARKDOWN"
+    ],
+    "run_at": "document_end"
+  }],
+
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*.svg", "styles.css", "themes.js"],
+      "matches": ["file://*/*"]
+    }
+  ],
+
+  "author": "federicobrancasi@gmail.com"
 }

@@ -1,62 +1,87 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lato:wght@400;700&family=Lora:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+/* CSS Variables - Defaults (Ocean theme) */
+:root {
+  /* Typography */
+  --font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size: 1.05em;
+  --font-weight: 550;
+
+  /* Theme colors - Ocean (default) */
+  --bg-primary: #f0f8ff;
+  --bg-secondary: #e6f2ff;
+  --text-primary: #1a365d;
+  --text-link: #2b6cb0;
+  --text-hover: #1a4a7a;
+  --border-color: #2b6cb0;
+  --header-bg: #e6f2ff;
+  --th-bg: #cce0ff;
+
+  /* Icon data URIs (blue for light themes) */
+  --folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232b6cb0'%3E%3Cpath d='M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z'/%3E%3C/svg%3E");
+  --file-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232b6cb0'%3E%3Cpath d='M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z'/%3E%3C/svg%3E");
+  --parent-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232b6cb0'%3E%3Cpath d='M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z'/%3E%3Cpath d='M12 10l4 4h-3v4h-2v-4H8l4-4z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+/* Base Styles */
 * {
-  font-size: 1.05em !important;
-  color: #ffffff !important;
-  font-family: "Montserrat";
-  font-weight: 550;
+  font-size: var(--font-size) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-family) !important;
+  font-weight: var(--font-weight);
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--bg-primary) !important;
   margin-left: 7% !important;
   margin-right: 7% !important;
   margin-bottom: 5% !important;
 }
 
+/* Header */
 h1 {
   font-size: 1.66em !important;
-  color: #1c1c1c !important;
+  color: var(--text-primary) !important;
   font-weight: 800;
-  background-color: #ffffff;
-  border: 2px solid #101010 !important;
-  padding-bottom: 3px !important;
-  padding-top: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
+  background-color: var(--header-bg) !important;
+  border: 2px solid var(--border-color) !important;
+  padding: 3px 5px !important;
   white-space: nowrap;
   display: block !important;
 }
 
-a:link {
-  color: #1c1c1c !important;
-}
-
+/* Links */
+a:link,
 a:visited {
-  color: #1c1c1c !important;
+  color: var(--text-link) !important;
 }
 
+/* Table Header Row */
 table tr:first-child th {
-  background: #f4f6fb !important;
+  background: var(--bg-secondary) !important;
   font-weight: 900;
   padding: 4px 6px;
-  color: #1c1c1c !important;
-  border-top: 1px solid #black;
-  border-bottom: 1px solid #black;
+  color: var(--text-primary) !important;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   text-align: center !important;
 }
 
 #nameColumnHeader {
-  background: #f4f6fb !important;
+  background: var(--bg-secondary) !important;
   font-weight: 900;
   padding: 4px 6px;
-  color: #1c1c1c !important;
-  border-top: 1px solid #black;
-  border-bottom: 1px solid #black;
+  color: var(--text-primary) !important;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   text-align: left !important;
 }
 
+/* Table */
 table {
   border-collapse: collapse;
-  background-color: #ffffff;
+  background-color: var(--bg-primary) !important;
   table-layout: auto !important;
   width: 100% !important;
 }
@@ -72,7 +97,7 @@ td {
 
 th {
   cursor: pointer;
-  background-color: #a9a9a9;
+  background-color: var(--th-bg) !important;
 }
 
 table.icon-dir {
@@ -84,46 +109,226 @@ table.icon-dir {
 }
 
 td.detailsColumn {
-  color: #1c1c1c !important;
+  color: var(--text-primary) !important;
   -webkit-padding-start: 0.5em !important;
   text-align: center !important;
   word-wrap: break-word !important;
   width: 30% !important;
 }
 
+/* Icon Links */
 a.icon {
   -webkit-padding-start: 1.7em !important;
   text-decoration: none;
 }
 
 a.icon:hover {
-  color: #aaaaaa !important;
-  transition: 0.2s !important;
+  color: var(--text-hover) !important;
+  transition: color 0.2s ease !important;
   text-decoration: none !important;
 }
 
+/* Alternating Row Colors */
 tr:nth-child(even) {
-  background-color: #f4f6fb;
+  background-color: var(--bg-secondary) !important;
 }
 
+/* File/Folder Icons - Using CSS variables for theme-aware icons */
 a.file {
-  background: url("https://i.imgur.com/FYrv7mJ.png") left top no-repeat !important;
-  background-size: 26px 26px !important;
+  background: var(--file-icon) left center no-repeat !important;
+  background-size: 20px 20px !important;
 }
 
 a.dir {
-  background: url("https://i.imgur.com/bHGgzMq.png") left top no-repeat !important;
-  background-size: 26px 26px !important;
+  background: var(--folder-icon) left center no-repeat !important;
+  background-size: 20px 20px !important;
 }
 
 a.up {
-  background: left top no-repeat !important;
-  background-image: url("https://i.imgur.com/p2y4Vnc.png") !important;
-  background-size: 26px 26px !important;
+  background: var(--parent-icon) left center no-repeat !important;
+  background-size: 20px 20px !important;
 }
 
+/* Parent Directory Text */
 #parentDirText {
   font-size: 0.8em !important;
   font-weight: bold;
-  color: #101010 !important;
+  color: var(--text-primary) !important;
+}
+
+/* ========================================
+   Emoji Icons Mode
+   ======================================== */
+
+body.emoji-icons a.dir,
+body.emoji-icons a.file,
+body.emoji-icons a.up {
+  background: none !important;
+  -webkit-padding-start: 0 !important;
+  padding-left: 0 !important;
+}
+
+body.emoji-icons a.dir::before {
+  content: "📁 ";
+}
+
+body.emoji-icons a.file::before {
+  content: "📄 ";
+}
+
+body.emoji-icons a.up::before {
+  content: "⬆️ ";
+}
+
+/* ========================================
+   Floating Settings Toolbar
+   ======================================== */
+
+.fe-toolbar {
+  position: fixed !important;
+  top: 8px !important;
+  right: 20px !important;
+  z-index: 999999 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+.fe-toolbar-toggle {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  border: 1px solid #ddd !important;
+  background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23888888'%3E%3Cpath d='M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z'/%3E%3C/svg%3E") center center no-repeat !important;
+  background-size: 18px 18px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+  cursor: pointer !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.fe-toolbar-toggle:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.fe-toolbar-panel {
+  position: absolute !important;
+  top: 36px !important;
+  right: 0 !important;
+  width: 220px !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  padding: 16px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(-10px) !important;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s !important;
+}
+
+.fe-toolbar-expanded .fe-toolbar-panel {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+.fe-toolbar-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 12px !important;
+}
+
+.fe-toolbar-row label {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #333 !important;
+}
+
+.fe-toolbar-row select {
+  padding: 6px 8px !important;
+  font-size: 12px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+  cursor: pointer !important;
+  min-width: 100px !important;
+  color: #333 !important;
+}
+
+.fe-toolbar-row select:focus {
+  outline: none !important;
+  border-color: #2b6cb0 !important;
+}
+
+.fe-toolbar-row input[type="range"] {
+  width: 100px !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+  background: #ddd !important;
+  appearance: none !important;
+  cursor: pointer !important;
+}
+
+.fe-toolbar-row input[type="range"]::-webkit-slider-thumb {
+  appearance: none !important;
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50% !important;
+  background: #2b6cb0 !important;
+  cursor: pointer !important;
+}
+
+.fe-toolbar-row #fe-size-value {
+  font-size: 11px !important;
+  color: #666 !important;
+  margin-left: 4px !important;
+}
+
+.fe-toolbar-link {
+  display: block !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  color: #666 !important;
+  text-decoration: none !important;
+  padding-top: 8px !important;
+  border-top: 1px solid #eee !important;
+  margin-top: 4px !important;
+}
+
+.fe-toolbar-link:hover {
+  color: #2b6cb0 !important;
+  text-decoration: underline !important;
+}
+
+/* Dark mode for toolbar */
+.fe-toolbar-dark .fe-toolbar-toggle {
+  background: #2a2a4e url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23aaaaaa'%3E%3Cpath d='M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z'/%3E%3C/svg%3E") center center no-repeat !important;
+  background-size: 18px 18px !important;
+  border-color: #4a4a6a !important;
+}
+
+.fe-toolbar-dark .fe-toolbar-panel {
+  background: #1a1a2e !important;
+}
+
+.fe-toolbar-dark .fe-toolbar-row label {
+  color: #e0e0e0 !important;
+}
+
+.fe-toolbar-dark .fe-toolbar-row select {
+  background: #2a2a4e !important;
+  border-color: #4a4a6a !important;
+  color: #e0e0e0 !important;
+}
+
+.fe-toolbar-dark .fe-toolbar-row #fe-size-value {
+  color: #aaa !important;
+}
+
+.fe-toolbar-dark .fe-toolbar-link {
+  color: #aaa !important;
+  border-top-color: #4a4a6a !important;
+}
+
+.fe-toolbar-dark .fe-toolbar-link:hover {
+  color: #7ec8e3 !important;
 }
